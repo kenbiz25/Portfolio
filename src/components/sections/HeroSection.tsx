@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const titles = [
-  "Data Strategist",
-  "SEO Expert",
+  "Data Strategy & Consultant",
+  "Web Development",
   "Digital Systems Architect",
   "Impact-Driven Consultant",
 ];
@@ -198,9 +198,9 @@ export const HeroSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-2xl animate-pulse-slow" />
               <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/50 shadow-2xl bg-gradient-to-br from-primary to-accent">
                 <img
-                  src="https://kenkiplagat.co.ke/img/kip-web.png"
+                  src="img/kip-web.png"
                   alt="Keneth Kiplagat - Data & Digital Strategy Professional"
-                  className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-700"
+                  className="w-full h-full object-cover scale-97 hover:scale-110 transition-transform duration-700"
                 />
               </div>
               <div className="absolute -top-4 -right-4 bg-card border border-border px-4 py-2 rounded-xl shadow-lg animate-float">
@@ -221,7 +221,7 @@ export const HeroSection = () => {
               <div className="absolute -inset-3 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-xl" />
               <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/50 shadow-xl bg-gradient-to-br from-primary to-accent">
                 <img
-                  src="https://kenkiplagat.co.ke/img/kip-web.png"
+                  src="img/kip-web.png"
                   alt="Keneth Kiplagat"
                   className="w-full h-full object-cover"
                 />
