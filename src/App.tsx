@@ -13,6 +13,10 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import ProjectDetail from "./pages/projects/ProjectDetail";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
+import Tools from "./pages/Tools";
+import HtmlToPdf from "./pages/tools/HtmlToPdf";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +52,10 @@ const App = () => {
                 />
                 <Route path="/experience" element={<Experience />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/tools" element={<Tools />} />
+                <Route path="/tools/html-to-pdf" element={<HtmlToPdf />} />
 
                 {/* Catch-all */}
                 <Route path="*" element={<NotFound />} />

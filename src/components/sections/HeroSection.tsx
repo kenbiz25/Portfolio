@@ -168,7 +168,7 @@ export const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-hero-fade-in animation-delay-500">
               <Button asChild size="lg" className="btn-primary rounded-full px-8 group">
                 <a
-                  href="https://calendly.com/kenethkiplagat"
+                  href="https://calendly.com/keneth_kiplagat/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

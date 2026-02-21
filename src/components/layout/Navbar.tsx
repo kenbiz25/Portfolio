@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Experience", href: "/experience" },
+  { name: "Tools", href: "/tools" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -53,7 +54,8 @@ export const Navbar = () => {
                 key={link.name}
                 to={link.href}
                 className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full ${
-                  location.pathname === link.href
+                  location.pathname === link.href ||
+                  (link.href !== "/" && location.pathname.startsWith(link.href))
                     ? "text-primary after:w-full"
                     : "text-foreground/80 hover:text-primary"
                 }`}
@@ -76,7 +78,7 @@ export const Navbar = () => {
               </a>
               <Button asChild size="sm" className="btn-accent rounded-full px-4">
                 <a
-                  href="https://calendly.com/kenethkiplagat"
+                  href="https://calendly.com/keneth_kiplagat/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -112,7 +114,8 @@ export const Navbar = () => {
                 key={link.name}
                 to={link.href}
                 className={`text-base font-medium transition-colors py-2 ${
-                  location.pathname === link.href
+                  location.pathname === link.href ||
+                  (link.href !== "/" && location.pathname.startsWith(link.href))
                     ? "text-primary"
                     : "text-foreground/80 hover:text-primary"
                 }`}
@@ -133,7 +136,7 @@ export const Navbar = () => {
                 WhatsApp
               </a>
               <a
-                href="https://calendly.com/kenethkiplagat"
+                href="https://calendly.com/keneth_kiplagat/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 py-3 rounded-full btn-accent font-medium"

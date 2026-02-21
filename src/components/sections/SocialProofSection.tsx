@@ -9,10 +9,11 @@ const stats = [
 ];
 
 const partners = [
-  { name: "Kenya Human Rights Commission", Image: "/img/khrc.webp" },
-  { name: "Mdundo", Image: "/img/mdundo.svg" },
-  { name: "Hai Africa", Image: "/img/HAI.svg" },
   { name: "Resolve Communications", Image: "/img/resolve.svg" },
+  { name: "Medtronic LABS", Image: "/img/LABS.svg" },
+  { name: "Hai Africa", Image: "/img/HAI.svg" },
+  { name: "Kenya Human Rights Commission", Image: "/img/khrc.svg" },
+  { name: "Mdundo", Image: "/img/mdundo.svg" },
   { name: "Synergy Gases", Image: "/img/Synergy.svg" },
 ];
 

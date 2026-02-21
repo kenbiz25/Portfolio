@@ -30,7 +30,7 @@ const Contact = () => {
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <ScrollReveal delay={100}>
                 <a
-                  href="https://calendly.com/kenethkiplagat"
+                  href="https://calendly.com/keneth_kiplagat/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group bg-card border border-border rounded-2xl p-6 text-center card-hover block"
@@ -98,7 +98,7 @@ const Contact = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild className="btn-primary rounded-full">
                     <a
-                      href="https://calendly.com/kenethkiplagat"
+                      href="https://calendly.com/keneth_kiplagat/30min"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -236,7 +236,7 @@ export const ContactSection = () => {
                 </p>
                 <Button asChild className="btn-accent rounded-full">
                   <a
-                    href="https://calendly.com/kenethkiplagat"
+                    href="https://calendly.com/keneth_kiplagat/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -32,7 +32,9 @@ export const Footer = () => {
                 { name: "Home", href: "/" },
                 { name: "Portfolio", href: "/portfolio" },
                 { name: "Experience", href: "/experience" },
-                { name: "Contact", href: "/contact" }
+                { name: "Contact", href: "/contact" },
+                { name: "Privacy Policy", href: "/privacy" },
+                { name: "Terms & Conditions", href: "/terms" }
               ].map((item) => (
                 <li key={item.name}>
                   <Link

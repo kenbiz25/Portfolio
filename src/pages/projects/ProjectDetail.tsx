@@ -7,24 +7,140 @@ import { ProjectGallery } from "@/components/projects/ProjectGallery";
 
 export const projects = [
   {
-    id: "teenage-pregnancies-analysis",
-    title: "Teenage Pregnancies in Kenya Analysis",
-    category: "Data Analysis",
+    id: "whatsapp-ai-chatbot",
+    title: "WhatsApp AI-Powered Chatbot",
+    category: "AI & Automation",
+    date: "2025",
+    problem: "High volumes of repetitive WhatsApp queries overwhelmed staff — training questions, general FAQs, and escalation routing were handled manually, causing slow response times and inconsistent quality across teams.",
+    action: "Built an AI-powered chatbot on WhatsApp Business API using RAG (Retrieval-Augmented Generation) to pull answers from a curated knowledge base. Integrated intelligent escalation logic to route unresolved or complex cases to the right human agents automatically.",
+    outcome: "Enabled 24/7 automated query handling, drastically cut manual response load, and improved escalation accuracy — allowing staff to focus on high-value interactions while routine queries were resolved instantly.",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop"
+    ],
+    liveUrl: "",
+    tools: ["Python", "RAG", "WhatsApp Business API", "LLM", "Vector Database"],
+    deliverables: [
+      "AI chatbot with RAG knowledge pipeline",
+      "Intelligent escalation routing to human agents",
+      "Training & onboarding knowledge base integration",
+      "Conversation analytics dashboard"
+    ],
+    impact: "24/7 automated query handling with intelligent escalation to human agents"
+  },
+  {
+    id: "tuvote-voting-platform",
+    title: "TuVote — Organizational Voting Platform",
+    category: "Digital Platforms & Engagement",
+    date: "2025",
+    problem: "Organizations relied on manual, fragmented voting processes — paper ballots, email polls, or generic forms — that were slow, hard to audit, and eroded confidence in election outcomes.",
+    action: "Developed a purpose-built digital voting platform for organizations with secure voter authentication, configurable ballot creation, real-time result tracking, and a complete audit trail to ensure transparency and trust.",
+    outcome: "Organizations now run fast, secure, and fully transparent digital elections with instant results, verifiable records, and significantly reduced administrative overhead.",
+    image: "https://images.unsplash.com/photo-1494172961521-33799ddd43a5?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
+    ],
+    liveUrl: "https://tuvote.co.ke",
+    tools: ["React", "Node.js", "PostgreSQL", "JWT Auth", "TypeScript"],
+    deliverables: [
+      "Secure ballot creation and management system",
+      "Voter authentication and access control",
+      "Real-time results dashboard",
+      "Audit trail and reporting module"
+    ],
+    impact: "Secure, transparent organizational voting with real-time results and full audit trail"
+  },
+  {
+    id: "spice-insights-portal",
+    title: "SPICE Insights Portal (MDTInsights)",
+    category: "Health Data & Decision Systems",
     date: "2024",
-    problem: "Fragmented data across counties made policy-making difficult. Stakeholders lacked a unified view of teenage pregnancy trends across Kenya's 47 counties.",
-    action: "Conducted comprehensive data analysis examining trends across all counties. Built interactive dashboards and created actionable reports for policymakers.",
-    outcome: "Actionable insights for policymakers, adopted by 3 county governments. The analysis informed targeted intervention programs.",
+    problem: "Multi-country health programs operated with fragmented datasets, delayed reporting cycles, and limited visibility for leadership and funders, increasing operational and funding risk.",
+    action: "Designed and deployed a centralized, role-based analytics platform consolidating program data across countries into standardized KPIs and executive dashboards for ministries, donors, and leadership teams.",
+    outcome: "Reduced decision turnaround time from weeks to days, improved data reliability across programs, and increased funder confidence through transparent, real-time reporting.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
-    // Add 2-5 gallery images here
     galleryImages: [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop"
     ],
-    liveUrl: "", // Add live project URL if available
-    tools: ["Python", "Pandas", "Tableau", "Excel"],
-    deliverables: ["Interactive county-level dashboard", "Policy recommendation report", "Trend analysis documentation"],
-    impact: "3 county governments adopted recommendations"
+    liveUrl: "https://mdtinsights.org",
+    tools: ["Power BI", "Python", "SQL", "Excel"],
+    deliverables: [
+      "Executive and donor-ready dashboards",
+      "Standardized multi-country KPI framework",
+      "Role-based access and reporting workflows"
+    ],
+    impact: "Enabled faster executive decisions, reduced reporting risk, and strengthened donor trust across health programs"
   },
+  {
+    id: "manifest-dublin-church-website",
+    title: "Manifest Dublin Digital Platform",
+    category: "Digital Platforms & Engagement",
+    date: "2024",
+    problem: "The organization lacked a clear, modern digital presence to communicate vision, engage its community, and support growth, limiting reach and participation.",
+    action: "Translated organizational vision into a scalable, accessible digital platform focused on clarity, usability, and engagement across devices.",
+    outcome: "Improved user engagement, reduced friction for new visitors, and created a sustainable digital foundation for community growth.",
+    image: "https://images.unsplash.com/photo-1520975916090-3105956dac38?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1515169067865-5387ec356754?w=800&h=500&fit=crop"
+    ],
+    liveUrl: "https://manifestireland.org",
+    tools: ["WordPress", "HTML", "CSS", "JavaScript"],
+    deliverables: [
+      "Responsive, accessible website",
+      "Clear content and navigation architecture",
+      "Optimized engagement pathways"
+    ],
+    impact: "Stronger digital engagement and improved visibility for community outreach"
+  },
+  {
+    id: "repairshop-platform",
+    title: "RepairShop Kenya",
+    category: "Marketplace & Platform Systems",
+    date: "2024",
+    problem: "Service discovery in the informal repair sector was inefficient, with customers struggling to find reliable technicians and technicians lacking consistent access to demand.",
+    action: "Built a two-sided marketplace platform that connects customers with technicians, streamlining service discovery, communication, and job coordination.",
+    outcome: "Reduced service search friction, improved customer access to trusted technicians, and unlocked new income opportunities for service providers.",
+    image: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=800&h=500&fit=crop"
+    ],
+    liveUrl: "https://repairshop.co.ke",
+    tools: ["PHP", "MySQL", "JavaScript"],
+    deliverables: [
+      "Customer–technician matching system",
+      "Service listing and inquiry workflows",
+      "Administrative management dashboard"
+    ],
+    impact: "Improved service access while enabling income generation for local technicians"
+  },
+  {
+    id: "kenya-properties-platform",
+    title: "Kenya Properties Platform",
+    category: "PropTech & Marketplaces",
+    date: "2024",
+    problem: "The housing market lacked a unified digital layer, creating inefficiencies for tenants, property owners, and developers to find and connect with each other.",
+    action: "Developed a centralized property discovery platform connecting tenants, landlords, and developers with structured listings and search capabilities.",
+    outcome: "Improved housing discovery efficiency and increased visibility for property listings, reducing friction across the housing value chain.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&h=500&fit=crop"
+    ],
+    liveUrl: "https://kenyaproperties.co.ke",
+    tools: ["PHP", "MySQL", "WordPress", "JavaScript"],
+    deliverables: [
+      "Property listing and search platform",
+      "Tenant–landlord–developer connection workflows",
+      "Location and filtering system"
+    ],
+    impact: "Increased transparency and efficiency in property discovery across Kenya"
+  },
+
   {
     id: "nbc-report-2024",
     title: "NBC Report 2024/2025",
@@ -164,7 +280,7 @@ export const projects = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
     ],
-    liveUrl: "",
+    liveUrl: "https://kenkiplagat.co.ke/",
     tools: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
     deliverables: ["Modern portfolio website", "Contact form integration", "Performance optimization", "SEO setup"],
     impact: "Professional online presence established"
@@ -340,7 +456,7 @@ const ProjectDetail = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="btn-primary rounded-full">
                 <a
-                  href="https://calendly.com/kenethkiplagat"
+                  href="https://calendly.com/keneth_kiplagat/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

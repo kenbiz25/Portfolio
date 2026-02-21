@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 export const CalendlySection = () => {
-  const calendlyUrl = "https://calendly.com/kenethkiplagat";
+  const calendlyUrl = "https://calendly.com/keneth_kiplagat/30min";
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5">

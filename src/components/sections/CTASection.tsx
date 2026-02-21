@@ -34,7 +34,7 @@ export const CTASection = () => {
                 className="btn-primary rounded-full px-8 py-6 text-lg font-semibold shadow-xl"
               >
                 <a
-                  href="https://calendly.com/kenethkiplagat"
+                  href="https://calendly.com/keneth_kiplagat/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

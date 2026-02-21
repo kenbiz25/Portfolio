@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 import { PageTransition } from "@/components/PageTransition";
 import { projects } from "./projects/ProjectDetail";
 
-const categories = ["All", "Data Analysis", "Web Development", "SEO"];
+const categories = ["All", "AI & Automation", "Data Analysis", "Web Development", "SEO"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -136,7 +136,7 @@ const Portfolio = () => {
                 Let's discuss how I can help you achieve clarity, visibility, and measurable impact.
               </p>
               <a
-                href="https://calendly.com/kenethkiplagat"
+                href="https://calendly.com/keneth_kiplagat/30min"
                 target="_blank"
                 rel="noopener noreferrer"
               >

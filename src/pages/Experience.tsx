@@ -243,7 +243,7 @@ const Experience = () => {
                 Let's leverage my skills and experience to drive impact for your organization.
               </p>
               <a
-                href="https://calendly.com/kenethkiplagat"
+                href="https://calendly.com/keneth_kiplagat/30min"
                 target="_blank"
                 rel="noopener noreferrer"
               >
