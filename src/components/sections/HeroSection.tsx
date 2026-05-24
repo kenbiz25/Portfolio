@@ -1,68 +1,26 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const titles = [
-  "Tech Operations Professional",
-  "AI Workflow Coordinator",
-  "Digital Systems Specialist",
-  "Process Optimization Lead",
-];
-
-const trustIndicators = [
-  "HealthTech",
-  "NGOs",
-  "Support Operations",
-  "Process Optimization",
-  "Digital Strategy",
+const focusPills = [
+  { label: "AI Workflows", href: "/portfolio" },
+  { label: "Support Ops", href: "/portfolio" },
+  { label: "Process Design", href: "/portfolio" },
 ];
 
 export const HeroSection = () => {
-  const [currentTitle, setCurrentTitle] = useState(0);
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Typing animation effect
-  useEffect(() => {
-    const title = titles[currentTitle];
-    const typeSpeed = isDeleting ? 50 : 100;
-    const pauseTime = 2000;
-
-    if (!isDeleting && displayText === title) {
-      setTimeout(() => setIsDeleting(true), pauseTime);
-      return;
-    }
-
-    if (isDeleting && displayText === "") {
-      setIsDeleting(false);
-      setCurrentTitle((prev) => (prev + 1) % titles.length);
-      return;
-    }
-
-    const timeout = setTimeout(() => {
-      setDisplayText(
-        isDeleting
-          ? title.substring(0, displayText.length - 1)
-          : title.substring(0, displayText.length + 1)
-      );
-    }, typeSpeed);
-
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentTitle]);
-
   const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    aboutSection?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-muted/60 via-background to-primary/5">
-      {/* Background Layers */}
+      {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-muted/60 via-background to-primary/5" />
         <div className="hidden lg:block absolute inset-0">
           <div className="absolute right-0 top-0 w-3/5 h-full">
             <video
@@ -81,115 +39,86 @@ export const HeroSection = () => {
                 type="video/mp4"
               />
             </video>
-            <div
-              className={`absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-accent transition-opacity duration-1000 ${
-                isVideoLoaded ? "opacity-0" : "opacity-100"
-              }`}
-            />
+            <div className={`absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-accent transition-opacity duration-1000 ${isVideoLoaded ? "opacity-0" : "opacity-100"}`} />
           </div>
-
-          {/* Overlay gradients for smooth transitions */}
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 via-40% to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 via-50% to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent via-60% to-primary/5 dark:to-primary/10 pointer-events-none" />
-          <div className="absolute right-0 top-0 w-1/2 h-full bg-primary/5 dark:bg-primary/10 pointer-events-none" />
-
-          {/* Floating elements */}
           <div className="absolute top-20 right-20 w-32 h-32 border border-white/20 rounded-full animate-float-slow" />
           <div className="absolute bottom-40 right-40 w-24 h-24 border border-accent/30 rounded-full animate-float-delayed" />
-          <div className="absolute top-1/2 right-10 w-16 h-16 bg-accent/20 rounded-full blur-xl animate-pulse" />
         </div>
-      </div>
-
-      {/* Mobile Background */}
-      <div className="lg:hidden absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-muted/80 via-background to-accent/10" />
-        <div className="absolute top-20 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-40 left-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
+        <div className="lg:hidden absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-muted/80 via-background to-accent/10" />
+          <div className="absolute top-20 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-40 left-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
+        </div>
       </div>
 
       {/* Main Content */}
       <div className="container-custom relative z-10 py-20 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+
           {/* Left Content */}
-          <div className="text-center lg:text-left pt-20 lg:pt-0">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 leading-tight animate-hero-fade-in animation-delay-100">
-              Building scalable operational systems that improve{" "}
+          <div className="text-center lg:text-left pt-16 lg:pt-0">
+
+            {/* Eyebrow */}
+            <span className="inline-block text-accent font-medium text-sm tracking-widest uppercase mb-3 md:mb-5 animate-hero-fade-in animation-delay-100">
+              Tech Operations · Digital Systems · AI
+            </span>
+
+            {/* Headline — short & punchy */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-3 md:mb-5 leading-[1.1] animate-hero-fade-in animation-delay-200">
+              Operations
+              <br />
+              built to{" "}
               <span className="relative inline-block">
-                <span className="text-primary">support delivery</span>
+                <span className="text-primary">scale.</span>
                 <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 100 6">
-                  <path
-                    d="M0 5 Q 25 0, 50 5 T 100 5"
-                    fill="none"
-                    stroke="hsl(var(--accent))"
-                    strokeWidth="2"
-                    className="animate-draw-line"
-                  />
+                  <path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="hsl(var(--accent))" strokeWidth="2" className="animate-draw-line" />
                 </svg>
               </span>
-              , decision-making, and <span className="text-accent">organizational impact</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-hero-fade-in animation-delay-200">
-              I'm <strong className="text-foreground">Keneth Kiplagat</strong> — a Tech Operations and Digital Systems Professional
-              with experience across HealthTech, NGOs, digital strategy, support operations, and process optimization.
-              I help organizations improve workflows, strengthen operational visibility, and implement scalable systems
-              powered by data, technology, and automation.
+            {/* Single tagline */}
+            <p className="text-base md:text-xl text-muted-foreground mb-4 md:mb-8 max-w-md mx-auto lg:mx-0 leading-relaxed animate-hero-fade-in animation-delay-300">
+              I design the workflows, systems, and AI tools that help organizations move faster and deliver more.
             </p>
 
-            {/* Typing Animation */}
-            <div className="h-8 mb-6 animate-hero-fade-in animation-delay-300">
-              <span className="text-lg text-muted-foreground">
-                <span className="text-accent font-semibold">
-                  {displayText}
-                  <span className="inline-block w-0.5 h-5 bg-accent ml-1 animate-blink" />
-                </span>
-              </span>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-8 animate-hero-fade-in animation-delay-400">
-              {trustIndicators.map((indicator, index) => (
-                <span 
-                  key={indicator}
-                  className={`px-3 py-1 rounded-full text-sm ${
-                    index === 0 
-                      ? "bg-primary/10 text-primary font-medium" 
-                      : "bg-muted text-muted-foreground"
-                  }`}
+            {/* Focus pills — link to portfolio */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-5 md:mb-10 animate-hero-fade-in animation-delay-400">
+              {focusPills.map((pill) => (
+                <Link
+                  key={pill.label}
+                  to={pill.href}
+                  className="px-4 py-1.5 rounded-full text-sm bg-primary/10 text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
                 >
-                  {indicator}
-                </span>
+                  {pill.label}
+                </Link>
               ))}
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-hero-fade-in animation-delay-500">
               <Button asChild size="lg" className="btn-primary rounded-full px-8 group">
-                <a
-                  href="https://calendly.com/keneth_kiplagat/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Book a Strategy Call
-                </a>
+                <Link to="/portfolio">
+                  View My Work
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="rounded-full px-8 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground group"
+                className="rounded-full px-8 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
-                <Link to="/portfolio">
-                  View Selected Work
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
+                <a href="https://calendly.com/keneth_kiplagat/30min" target="_blank" rel="noopener noreferrer">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Book a Call
+                </a>
               </Button>
             </div>
           </div>
 
-          {/* Right Side - Profile Image Desktop */}
+          {/* Right — Profile Image Desktop */}
           <div className="hidden lg:flex justify-center items-center relative">
             <div className="relative animate-hero-fade-in animation-delay-300">
               <div className="absolute -inset-8 border-2 border-dashed border-primary/20 rounded-full animate-spin-slow" />
@@ -218,15 +147,12 @@ export const HeroSection = () => {
           <div className="lg:hidden flex justify-center order-first">
             <div className="relative animate-hero-fade-in">
               <div className="absolute -inset-3 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-xl" />
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/50 shadow-xl bg-gradient-to-br from-primary to-accent">
-                <img
-                  src="img/kip-web.png"
-                  alt="Keneth Kiplagat"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative w-36 h-36 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white/50 shadow-xl bg-gradient-to-br from-primary to-accent">
+                <img src="img/kip-web.png" alt="Keneth Kiplagat" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
+
         </div>
       </div>
 

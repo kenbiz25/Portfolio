@@ -7,6 +7,45 @@ import { ProjectGallery } from "@/components/projects/ProjectGallery";
 
 export const projects = [
   {
+    id: "digital-health-scanner",
+    title: "Digital Health Intelligence Scanner — Medtronic LABS",
+    category: "AI & Automation",
+    date: "2026",
+    problem: "Leadership teams at Medtronic LABS needed timely, credible intelligence on digital health developments across 9 priority markets — but sourcing, verifying, and synthesizing that intelligence manually was slow, inconsistent, and impossible to scale. Critical signals were buried in noise, and executive time was being spent reading raw news rather than acting on insights.",
+    action: "I built an automated AI intelligence platform — a 7-step multi-agent pipeline that scrapes 100+ targeted queries across web, news, academic, donor, and government sources; scores each article for credibility (0.0–1.0) filtering out recycled press releases and AI-generated content; enriches it with country tags, health domain categories, urgency tier, and sentiment; classifies business impact (Critical / High / Medium / Low); writes country-level intelligence snapshots with strategic outlook and action items; generates a branded multi-page PDF executive brief; and emails a structured digest to opted-in leadership. The pipeline runs on a configurable schedule (default: every 2 days) or can be triggered manually from the dashboard for any subset of the 9 target countries.",
+    outcome: "Leadership now receives structured, AI-verified digital health intelligence across Sierra Leone, Bangladesh, Kenya, Rwanda, Ghana, India, Saudi Arabia, Tanzania, and Bhutan — automatically, every 2 days. Each article surfaces with an executive headline and a recommended action. Credibility scoring removes the noise. Decision-making shifted from reactive news browsing to proactive, prioritized intelligence delivery — without adding headcount.",
+    lessons: [
+      {
+        title: "Multi-agent pipelines need orchestration, not just automation",
+        detail: "Seven independent agents each doing one thing well is powerful — but only if their contracts are explicit. A silent failure in step 2 corrupts everything downstream. Orchestration is the product."
+      },
+      {
+        title: "Credibility scoring is the most valuable step",
+        detail: "Garbage in, garbage out. The verifier that filters noise — recycled press releases, single-source duplication, AI-generated filler — makes every downstream step more valuable. Trust the filter."
+      },
+      {
+        title: "Delivery format determines adoption",
+        detail: "A well-structured PDF brief that lands in an inbox gets read. A dashboard that requires login gets ignored. The last mile of intelligence delivery is as important as the pipeline that produces it."
+      }
+    ],
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=500&fit=crop"
+    ],
+    liveUrl: "",
+    linkedinUrl: "",
+    tools: ["Python", "FastAPI", "Anthropic Claude", "Multi-agent Pipeline", "Tavily API", "ReportLab", "APScheduler", "WebSocket", "Docker", "AWS EC2"],
+    deliverables: [
+      "7-step multi-agent AI pipeline (scrape → verify → enrich → classify → write → PDF → email)",
+      "Credibility scoring engine filtering 100+ sources per pipeline run",
+      "Branded PDF executive brief with per-country intelligence snapshots",
+      "HTML email digest with impact-classified article highlights and PDF attachment",
+      "Real-time dashboard with WebSocket pipeline monitoring and run history"
+    ],
+    impact: "Automated AI-powered digital health intelligence across 9 priority markets — delivered to leadership as verified, impact-classified PDF briefs every 2 days"
+  },
+  {
     id: "whatsapp-ai-chatbot",
     title: "RAG-Based AI Support Tool for Community Health Workers — Sierra Leone",
     category: "AI & Automation",
