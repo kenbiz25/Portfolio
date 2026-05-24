@@ -17,6 +17,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Tools from "./pages/Tools";
 import HtmlToPdf from "./pages/tools/HtmlToPdf";
+import Solutions from "./pages/Solutions";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,7 @@ const App = () => {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/tools" element={<Tools />} />
                 <Route path="/tools/html-to-pdf" element={<HtmlToPdf />} />
+                <Route path="/solutions" element={<Solutions />} />
 
                 {/* Catch-all */}
                 <Route path="*" element={<NotFound />} />
