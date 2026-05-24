@@ -70,7 +70,7 @@ const Terms = () => {
                 <div className="bg-card border border-border rounded-2xl p-6">
                   <h2 className="text-xl font-bold text-foreground mb-3">Contact</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Questions about these terms can be sent to: kenethkiplagat.io@gmail.com
+                    Questions about these terms can be sent to: kenbiz25@gmail.com
                   </p>
                 </div>
               </ScrollReveal>

@@ -92,10 +92,10 @@ export const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-accent flex-shrink-0" />
                 <a
-                  href="mailto:kenethkiplagat.io@gmail.com"
+                  href="mailto:kenbiz25@gmail.com"
                   className="text-section-dark-foreground/70 hover:text-accent transition-colors text-sm"
                 >
-                  kenethkiplagat.io@gmail.com
+                  kenbiz25@gmail.com
                 </a>
               </li>
             </ul>

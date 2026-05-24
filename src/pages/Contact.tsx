@@ -64,7 +64,7 @@ const Contact = () => {
 
               <ScrollReveal delay={300}>
                 <a
-                  href="mailto:kenethkiplagat.io@gmail.com"
+                  href="mailto:kenbiz25@gmail.com"
                   className="group bg-card border border-border rounded-2xl p-6 text-center card-hover block"
                 >
                   <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors">
@@ -72,7 +72,7 @@ const Contact = () => {
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">Email</h3>
                   <p className="text-sm text-muted-foreground">
-                    kenethkiplagat.io@gmail.com
+                    kenbiz25@gmail.com
                   </p>
                 </a>
               </ScrollReveal>

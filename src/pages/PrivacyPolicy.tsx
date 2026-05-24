@@ -87,7 +87,7 @@ const PrivacyPolicy = () => {
                 <div className="bg-card border border-border rounded-2xl p-6">
                   <h2 className="text-xl font-bold text-foreground mb-3">Contact</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    For privacy-related requests, contact: kenethkiplagat.io@gmail.com
+                    For privacy-related requests, contact: kenbiz25@gmail.com
                   </p>
                 </div>
               </ScrollReveal>
