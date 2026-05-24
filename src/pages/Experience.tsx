@@ -109,8 +109,8 @@ const Experience = () => {
                 Experience & Credentials
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                My work is supported by continuous learning across analytics, SEO, digital strategy, 
-                and data interpretation — applied in real-world environments, not just theory.
+                My work is supported by continuous learning across tech operations, AI workflow coordination,
+                digital systems, and data analysis — applied in real-world environments across HealthTech, NGOs, and digital-first organizations.
               </p>
             </ScrollReveal>
           </div>

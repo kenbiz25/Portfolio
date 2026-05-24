@@ -2,22 +2,20 @@ import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const titles = [
-  "Data Strategy & Consultant",
-  "Web Development",
-  "Digital Systems Architect",
-  "Impact-Driven Consultant",
+  "Tech Operations Professional",
+  "AI Workflow Coordinator",
+  "Digital Systems Specialist",
+  "Process Optimization Lead",
 ];
 
 const trustIndicators = [
-  "8+ years experience",
+  "HealthTech",
   "NGOs",
-  "Media",
-  "Health",
-  "Tech",
-  "Public Sector"
+  "Support Operations",
+  "Process Optimization",
+  "Digital Strategy",
 ];
 
 export const HeroSection = () => {
@@ -116,9 +114,9 @@ export const HeroSection = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left pt-20 lg:pt-0">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 leading-tight animate-hero-fade-in animation-delay-100">
-              Building data-driven systems that grow{" "}
+              Building scalable operational systems that improve{" "}
               <span className="relative inline-block">
-                <span className="text-primary">visibility</span>
+                <span className="text-primary">support delivery</span>
                 <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 100 6">
                   <path
                     d="M0 5 Q 25 0, 50 5 T 100 5"
@@ -129,13 +127,14 @@ export const HeroSection = () => {
                   />
                 </svg>
               </span>
-              , revenue, and <span className="text-accent">impact</span>
+              , decision-making, and <span className="text-accent">organizational impact</span>
             </h1>
 
             <p className="text-lg text-muted-foreground mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-hero-fade-in animation-delay-200">
-              I'm <strong className="text-foreground">Keneth Kiplagat</strong> — a Data & Digital Strategy Professional 
-              helping mission-driven organizations, startups, and institutions use data, SEO, and digital 
-              platforms to make smarter decisions and scale sustainably.
+              I'm <strong className="text-foreground">Keneth Kiplagat</strong> — a Tech Operations and Digital Systems Professional
+              with experience across HealthTech, NGOs, digital strategy, support operations, and process optimization.
+              I help organizations improve workflows, strengthen operational visibility, and implement scalable systems
+              powered by data, technology, and automation.
             </p>
 
             {/* Typing Animation */}
@@ -199,18 +198,18 @@ export const HeroSection = () => {
               <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/50 shadow-2xl bg-gradient-to-br from-primary to-accent">
                 <img
                   src="img/kip-web.png"
-                  alt="Keneth Kiplagat - Data & Digital Strategy Professional"
+                  alt="Keneth Kiplagat - Tech Operations & Digital Systems Professional"
                   className="w-full h-full object-cover scale-97 hover:scale-110 transition-transform duration-700"
                 />
               </div>
               <div className="absolute -top-4 -right-4 bg-card border border-border px-4 py-2 rounded-xl shadow-lg animate-float">
-                <span className="font-semibold text-foreground text-sm">Data Solutions</span>
+                <span className="font-semibold text-foreground text-sm">Ops Systems</span>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-xl shadow-lg animate-float-delayed">
-                <span className="font-semibold text-sm">SEO & Strategy</span>
+                <span className="font-semibold text-sm">AI Workflows</span>
               </div>
               <div className="absolute top-1/2 -right-8 translate-y-8 bg-primary text-primary-foreground px-4 py-2 rounded-xl shadow-lg animate-float">
-                <span className="font-semibold text-sm">Digital Growth</span>
+                <span className="font-semibold text-sm">Process Ops</span>
               </div>
             </div>
           </div>

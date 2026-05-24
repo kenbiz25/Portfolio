@@ -1,49 +1,49 @@
-import { BarChart3, Search, Settings, FileEdit } from "lucide-react";
+import { Headset, Bot, Settings, BarChart3 } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const services = [
   {
-    icon: BarChart3,
-    title: "Data & Analytics for Decision-Making",
+    icon: Headset,
+    title: "Technical Support Operations",
     description:
-      "Turning raw data into dashboards, insights, and reports that leadership teams can actually use.",
+      "Building and improving support systems that deliver faster, more consistent, and scalable help to users and teams.",
     includes: [
-      "Data analysis & reporting",
-      "Monitoring & evaluation support",
-      "Google Analytics, Search Console & dashboards"
+      "Support workflow design & documentation",
+      "Ticketing system optimization",
+      "SLA tracking & performance reporting"
     ]
   },
   {
-    icon: Search,
-    title: "SEO & Digital Visibility Strategy",
+    icon: Bot,
+    title: "AI Workflow Coordination",
     description:
-      "Helping organizations get discovered by the right audience — sustainably.",
+      "Designing and coordinating AI-powered workflows that reduce manual effort and improve operational throughput.",
     includes: [
-      "Technical & content SEO",
-      "Search Console audits",
-      "Content performance analysis"
+      "AI tool integration & deployment",
+      "Prompt engineering & automation design",
+      "AI-assisted reporting & decision support"
     ]
   },
   {
     icon: Settings,
-    title: "Digital Systems & Process Optimization",
+    title: "Process Optimization & Digital Transformation",
     description:
-      "Designing simple, scalable digital workflows that reduce friction and improve outcomes.",
+      "Mapping, streamlining, and digitizing organizational processes to reduce friction and improve outcomes.",
     includes: [
-      "Platform & tool audits",
-      "Workflow optimization",
-      "Documentation & SOPs"
+      "Process audits & workflow redesign",
+      "SOPs & operational documentation",
+      "Change management support"
     ]
   },
   {
-    icon: FileEdit,
-    title: "Research, Reporting & Editorial Support",
+    icon: BarChart3,
+    title: "Data Analysis, Web Systems & SEO for AI",
     description:
-      "Clear, evidence-based communication for stakeholders, donors, and the public.",
+      "Using data and modern web practices to improve visibility, strengthen reporting, and prepare content for AI discovery.",
     includes: [
-      "Research synthesis",
-      "Media & campaign reporting",
-      "Editorial and impact reports"
+      "Data analysis & operational dashboards",
+      "Web systems setup & maintenance",
+      "SEO for AI (AEO, structured data, entity optimization)"
     ]
   },
 ];
@@ -60,7 +60,7 @@ export const ServicesSection = () => {
               Services I Offer
             </h2>
             <p className="text-muted-foreground">
-              I help organizations turn data, digital systems, and content into measurable growth and real-world impact.
+              I help organizations improve workflows, strengthen operational visibility, and implement scalable systems powered by data, technology, and automation.
             </p>
           </div>
         </ScrollReveal>

@@ -27,8 +27,7 @@ const Portfolio = () => {
                 Selected Work
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                These projects reflect my approach: clarity first, data always, impact measured. 
-                Each engagement focused not just on delivery, but on improving how decisions are made.
+                A selection of work across AI, HealthTech, digital systems, and operations. Each project focused not just on delivery, but on building systems that actually work in the real world.
               </p>
             </ScrollReveal>
           </div>
@@ -133,7 +132,7 @@ const Portfolio = () => {
                 Have a Project in Mind?
               </h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-                Let's discuss how I can help you achieve clarity, visibility, and measurable impact.
+                Let's discuss how I can help improve your workflows, build scalable systems, and coordinate AI tools that deliver real operational impact.
               </p>
               <a
                 href="https://calendly.com/keneth_kiplagat/30min"

@@ -2,99 +2,93 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
-import { ArrowLeft, Calendar, Tag, CheckCircle, Target, Zap, ExternalLink } from "lucide-react";
+import { ArrowLeft, Calendar, Tag, CheckCircle, Target, Zap, ExternalLink, Lightbulb, Linkedin } from "lucide-react";
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
 
 export const projects = [
   {
     id: "whatsapp-ai-chatbot",
-    title: "WhatsApp AI-Powered Chatbot",
+    title: "RAG-Based AI Support Tool for Community Health Workers — Sierra Leone",
     category: "AI & Automation",
-    date: "2025",
-    problem: "High volumes of repetitive WhatsApp queries overwhelmed staff — training questions, general FAQs, and escalation routing were handled manually, causing slow response times and inconsistent quality across teams.",
-    action: "Built an AI-powered chatbot on WhatsApp Business API using RAG (Retrieval-Augmented Generation) to pull answers from a curated knowledge base. Integrated intelligent escalation logic to route unresolved or complex cases to the right human agents automatically.",
-    outcome: "Enabled 24/7 automated query handling, drastically cut manual response load, and improved escalation accuracy — allowing staff to focus on high-value interactions while routine queries were resolved instantly.",
+    date: "April 2025 – May 2026",
+    problem: "Community Health Workers (CHWs) in Sierra Leone operate in low-connectivity, low-digital-literacy environments, often without reliable access to trusted clinical guidance during patient interactions. The Ministry of Health Sierra Leone's ambition to transition from paper-based to digital care — across community health and patient management — required tools that work in real-world field conditions, not just controlled environments.",
+    action: "Working with Medtronic LABS and the Ministry of Health Sierra Leone, I spent time in April with CHWs in the field to explore a RAG-based (Retrieval-Augmented Generation) AI support tool delivered entirely over WhatsApp — designed for low-connectivity, low-digital-literacy environments. The goal was to observe actual usage patterns, collect usability feedback, and understand how AI-powered tools perform in contexts defined by limited connectivity and varying digital literacy.",
+    outcome: "The field research phase surfaced three defining lessons that directly shaped the tool's design. By May 2026, the tool was fully implemented and deployed — giving Community Health Workers in Sierra Leone real-time access to trusted clinical guidance over WhatsApp, at scale. Retrieval quality, low-latency responses, and CHW onboarding were the three pillars that made adoption possible in the field.",
+    lessons: [
+      {
+        title: "Retrieval only works if what you're retrieving is trusted",
+        detail: "A hallucination isn't a UX problem — it's a risk. In healthcare, incorrect AI-generated answers aren't just unhelpful, they're potentially dangerous to patients and health workers alike."
+      },
+      {
+        title: "Latency isn't inconvenient — it's the adoption barrier",
+        detail: "In low-connectivity environments, a slow response is the difference between a tool that gets used and one that gets abandoned. Performance is a product requirement, not an optimization."
+      },
+      {
+        title: "Human connection is still needed",
+        detail: "Good understanding of the 'why' is critical to avoid search loops and tool burden. AI tools without proper onboarding and context lead to over-reliance or abandonment — neither is useful in the field."
+      }
+    ],
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=600&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=500&fit=crop",
       "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop"
     ],
     liveUrl: "",
-    tools: ["Python", "RAG", "WhatsApp Business API", "LLM", "Vector Database"],
+    linkedinUrl: "https://www.linkedin.com/posts/kkiplagat_ai-rag-digitalhealth-ugcPost-7455182538982998016-BZNF/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA_LOhsBldccvB4V1TLe4yzAU70f48zCDpk",
+    tools: ["Python", "RAG", "WhatsApp Business API", "LLM", "Vector Database", "Field Research"],
     deliverables: [
-      "AI chatbot with RAG knowledge pipeline",
-      "Intelligent escalation routing to human agents",
-      "Training & onboarding knowledge base integration",
-      "Conversation analytics dashboard"
+      "Fully implemented RAG-based AI chatbot deployed over WhatsApp",
+      "Field research with CHWs in Sierra Leone (April 2025)",
+      "Usability testing and feedback loops in low-connectivity environments",
+      "Full production deployment serving Community Health Workers (May 2026)"
     ],
-    impact: "24/7 automated query handling with intelligent escalation to human agents"
-  },
-  {
-    id: "tuvote-voting-platform",
-    title: "TuVote — Organizational Voting Platform",
-    category: "Digital Platforms & Engagement",
-    date: "2025",
-    problem: "Organizations relied on manual, fragmented voting processes — paper ballots, email polls, or generic forms — that were slow, hard to audit, and eroded confidence in election outcomes.",
-    action: "Developed a purpose-built digital voting platform for organizations with secure voter authentication, configurable ballot creation, real-time result tracking, and a complete audit trail to ensure transparency and trust.",
-    outcome: "Organizations now run fast, secure, and fully transparent digital elections with instant results, verifiable records, and significantly reduced administrative overhead.",
-    image: "https://images.unsplash.com/photo-1494172961521-33799ddd43a5?w=1200&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
-    ],
-    liveUrl: "https://tuvote.co.ke",
-    tools: ["React", "Node.js", "PostgreSQL", "JWT Auth", "TypeScript"],
-    deliverables: [
-      "Secure ballot creation and management system",
-      "Voter authentication and access control",
-      "Real-time results dashboard",
-      "Audit trail and reporting module"
-    ],
-    impact: "Secure, transparent organizational voting with real-time results and full audit trail"
+    impact: "Fully deployed AI support tool for Community Health Workers in Sierra Leone — from field research (April 2025) to live implementation (May 2026)"
   },
   {
     id: "spice-insights-portal",
-    title: "SPICE Insights Portal (MDTInsights)",
+    title: "SPICE Insights Portal — MDTInsights",
     category: "Health Data & Decision Systems",
-    date: "2024",
-    problem: "Multi-country health programs operated with fragmented datasets, delayed reporting cycles, and limited visibility for leadership and funders, increasing operational and funding risk.",
-    action: "Designed and deployed a centralized, role-based analytics platform consolidating program data across countries into standardized KPIs and executive dashboards for ministries, donors, and leadership teams.",
-    outcome: "Reduced decision turnaround time from weeks to days, improved data reliability across programs, and increased funder confidence through transparent, real-time reporting.",
+    date: "Q4 2024",
+    problem: "Health programs across 5+ countries operated without a unified digital layer for decision-making. Leadership, governments, and frontline teams were working from fragmented data and delayed reporting — limiting their ability to respond quickly and allocate resources where they were needed most.",
+    action: "I led the development of mdtinsights.org in Q4 2024, building a platform that powers health decision-making across 5+ countries through Power BI dashboards tailored to the needs of organizations and governments. The real challenge wasn't just building a website — it was learning how to close gaps, take ownership beyond assigned tasks, and ensure the platform serves frontline decisions, not just technical goals. I worked in an AI-first way throughout: using AI to accelerate learning, improve structure, and turn ideas into production without compromising judgment.",
+    outcome: "mdtinsights.org went live delivering real-time, role-based health dashboards to ministries and leadership teams across Africa. Decision turnaround time improved from weeks to days. The project also marked a turning point in how I approach technology work — building with intent, learning in public, and using AI to amplify impact. Everything is possible with the right tools, the right support, and a willingness to learn.",
+    lessons: [
+      {
+        title: "Go above and beyond assigned tasks",
+        detail: "Closing gaps, unblocking progress, and taking quiet ownership when it mattered most — the work that doesn't show up in a ticket is often the work that ships the product."
+      },
+      {
+        title: "Prioritize user needs over technical goals",
+        detail: "The platform had to serve frontline health decisions, not just satisfy engineering requirements. Every design choice was tested against that question: does this help the person making the decision?"
+      },
+      {
+        title: "Balance speed, quality, and scalability",
+        detail: "Timelines were tight. The solution was not to cut corners but to build smart — using AI tools and structured iteration to move fast without accumulating debt."
+      },
+      {
+        title: "Build with colleagues",
+        detail: "Feedback loops with the team made every iteration better. Shipping faster happened because of the people around me, not despite them."
+      },
+      {
+        title: "Work in an AI-first way",
+        detail: "Using AI to accelerate learning, improve structure, and turn ideas into production — without replacing judgment. AI amplified the work; the decisions were still human."
+      }
+    ],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
     galleryImages: [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
       "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop"
     ],
     liveUrl: "https://mdtinsights.org",
-    tools: ["Power BI", "Python", "SQL", "Excel"],
+    linkedinUrl: "https://www.linkedin.com/posts/kkiplagat_spice-insights-portal-share-7411891183020580864-s7ze/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA_LOhsBldccvB4V1TLe4yzAU70f48zCDpk",
+    tools: ["Power BI", "Python", "SQL", "Excel", "AI-assisted development"],
     deliverables: [
-      "Executive and donor-ready dashboards",
-      "Standardized multi-country KPI framework",
-      "Role-based access and reporting workflows"
+      "mdtinsights.org — live health decision-making platform",
+      "Power BI dashboards for 5+ country programs",
+      "Role-based access for governments, ministries, and leadership teams",
+      "Standardized KPI framework across multi-country health programs"
     ],
-    impact: "Enabled faster executive decisions, reduced reporting risk, and strengthened donor trust across health programs"
-  },
-  {
-    id: "manifest-dublin-church-website",
-    title: "Manifest Dublin Digital Platform",
-    category: "Digital Platforms & Engagement",
-    date: "2024",
-    problem: "The organization lacked a clear, modern digital presence to communicate vision, engage its community, and support growth, limiting reach and participation.",
-    action: "Translated organizational vision into a scalable, accessible digital platform focused on clarity, usability, and engagement across devices.",
-    outcome: "Improved user engagement, reduced friction for new visitors, and created a sustainable digital foundation for community growth.",
-    image: "https://images.unsplash.com/photo-1520975916090-3105956dac38?w=1200&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1515169067865-5387ec356754?w=800&h=500&fit=crop"
-    ],
-    liveUrl: "https://manifestireland.org",
-    tools: ["WordPress", "HTML", "CSS", "JavaScript"],
-    deliverables: [
-      "Responsive, accessible website",
-      "Clear content and navigation architecture",
-      "Optimized engagement pathways"
-    ],
-    impact: "Stronger digital engagement and improved visibility for community outreach"
+    impact: "Live platform powering health decisions across 5+ countries — built and shipped in Q4 2024"
   },
   {
     id: "repairshop-platform",
@@ -140,7 +134,68 @@ export const projects = [
     ],
     impact: "Increased transparency and efficiency in property discovery across Kenya"
   },
-
+  {
+    id: "khrc-srhr-report",
+    title: "KHRC SRHR Media Coverage Report",
+    category: "Data Analysis",
+    date: "2024",
+    problem: "No systematic tracking of media coverage for SRHR advocacy. The organization couldn't measure their media impact or optimize outreach.",
+    action: "Implemented media monitoring and analysis for Kenya Human Rights Commission. Created tracking systems and comprehensive coverage reports.",
+    outcome: "Evidence-based advocacy strategy that increased media engagement by 80%. Clear visibility into media reach and impact.",
+    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+    ],
+    liveUrl: "",
+    tools: ["Media Monitoring Tools", "Excel", "Data Visualization"],
+    deliverables: ["Media monitoring dashboard", "Monthly coverage reports", "Advocacy impact analysis"],
+    impact: "80% increase in media engagement"
+  },
+  {
+    id: "tuvote-voting-platform",
+    title: "TuVote — Organizational Voting Platform",
+    category: "Digital Platforms & Engagement",
+    date: "2025",
+    problem: "Organizations relied on manual, fragmented voting processes — paper ballots, email polls, or generic forms — that were slow, hard to audit, and eroded confidence in election outcomes.",
+    action: "Developed a purpose-built digital voting platform for organizations with secure voter authentication, configurable ballot creation, real-time result tracking, and a complete audit trail to ensure transparency and trust.",
+    outcome: "Organizations now run fast, secure, and fully transparent digital elections with instant results, verifiable records, and significantly reduced administrative overhead.",
+    image: "https://images.unsplash.com/photo-1494172961521-33799ddd43a5?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
+    ],
+    liveUrl: "https://tuvote.co.ke",
+    tools: ["React", "Node.js", "PostgreSQL", "JWT Auth", "TypeScript"],
+    deliverables: [
+      "Secure ballot creation and management system",
+      "Voter authentication and access control",
+      "Real-time results dashboard",
+      "Audit trail and reporting module"
+    ],
+    impact: "Secure, transparent organizational voting with real-time results and full audit trail"
+  },
+  {
+    id: "manifest-dublin-church-website",
+    title: "Manifest Dublin Digital Platform",
+    category: "Digital Platforms & Engagement",
+    date: "2024",
+    problem: "The organization lacked a clear, modern digital presence to communicate vision, engage its community, and support growth, limiting reach and participation.",
+    action: "Translated organizational vision into a scalable, accessible digital platform focused on clarity, usability, and engagement across devices.",
+    outcome: "Improved user engagement, reduced friction for new visitors, and created a sustainable digital foundation for community growth.",
+    image: "https://images.unsplash.com/photo-1520975916090-3105956dac38?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1515169067865-5387ec356754?w=800&h=500&fit=crop"
+    ],
+    liveUrl: "https://manifestireland.org",
+    tools: ["WordPress", "HTML", "CSS", "JavaScript"],
+    deliverables: [
+      "Responsive, accessible website",
+      "Clear content and navigation architecture",
+      "Optimized engagement pathways"
+    ],
+    impact: "Stronger digital engagement and improved visibility for community outreach"
+  },
   {
     id: "nbc-report-2024",
     title: "NBC Report 2024/2025",
@@ -177,23 +232,6 @@ export const projects = [
     tools: ["WordPress", "SEO", "Google Analytics"],
     deliverables: ["Responsive website", "SEO-optimized content", "Staff training program", "Analytics setup"],
     impact: "150% increase in organic traffic"
-  },
-  {
-    id: "khrc-srhr-report",
-    title: "KHRC SRHR Media Coverage Report",
-    category: "Data Analysis",
-    date: "2024",
-    problem: "No systematic tracking of media coverage for SRHR advocacy. The organization couldn't measure their media impact or optimize outreach.",
-    action: "Implemented media monitoring and analysis for Kenya Human Rights Commission. Created tracking systems and comprehensive coverage reports.",
-    outcome: "Evidence-based advocacy strategy that increased media engagement by 80%. Clear visibility into media reach and impact.",
-    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&h=600&fit=crop",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-    ],
-    liveUrl: "",
-    tools: ["Media Monitoring Tools", "Excel", "Data Visualization"],
-    deliverables: ["Media monitoring dashboard", "Monthly coverage reports", "Advocacy impact analysis"],
-    impact: "80% increase in media engagement"
   },
   {
     id: "zoe-africa-website",
@@ -405,6 +443,49 @@ const ProjectDetail = () => {
         </div>
       </section>
 
+      {/* Field Lessons */}
+      {project.lessons && project.lessons.length > 0 && (
+        <section className="py-12 bg-muted/20">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto">
+              <ScrollReveal>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-9 h-9 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Lightbulb className="w-4 h-4 text-accent" />
+                  </div>
+                  <h2 className="text-lg font-bold text-foreground">Field Lessons</h2>
+                </div>
+              </ScrollReveal>
+              <div className="grid md:grid-cols-3 gap-4">
+                {project.lessons.map((lesson, index) => (
+                  <ScrollReveal key={index} delay={index * 100}>
+                    <div className="bg-card border border-border rounded-2xl p-6 h-full">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <span className="text-sm font-bold text-primary">{index + 1}</span>
+                      </div>
+                      <h3 className="text-sm font-semibold text-foreground mb-3">{lesson.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{lesson.detail}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+              {project.linkedinUrl && (
+                <ScrollReveal delay={300}>
+                  <div className="mt-6 flex justify-center">
+                    <Button asChild variant="outline" size="sm" className="rounded-full gap-2">
+                      <a href={project.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                        <Linkedin className="w-4 h-4" />
+                        Read the full post on LinkedIn
+                      </a>
+                    </Button>
+                  </div>
+                </ScrollReveal>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Deliverables & Tools */}
       <section className="py-12 bg-muted/30">
         <div className="container-custom">
@@ -451,7 +532,7 @@ const ProjectDetail = () => {
               Want similar results for your organization?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto text-sm">
-              Let's discuss how I can help you achieve clarity, visibility, and measurable impact.
+              Let's discuss how I can help improve your workflows, build scalable systems, and coordinate AI tools that deliver real operational impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild size="lg" className="btn-primary rounded-full">

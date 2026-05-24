@@ -14,11 +14,10 @@ export const Footer = () => {
               Keneth<span className="text-accent">.</span>
             </Link>
             <p className="mt-4 text-section-dark-foreground/70 text-sm leading-relaxed">
-              I help organizations turn data, digital systems, and content into 
-              measurable growth and real-world impact.
+              I help organizations improve workflows, strengthen operational visibility, and implement scalable systems powered by data, technology, and automation.
             </p>
             <p className="mt-4 text-accent font-medium text-sm">
-              Data • Digital Strategy • Impact
+              Tech Operations • Digital Systems • AI Workflow
             </p>
           </div>
 
@@ -55,10 +54,10 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-2">
               {[
-                "Data & Analytics", 
-                "SEO & Visibility", 
-                "Digital Systems", 
-                "Research & Reporting"
+                "Technical Support Operations",
+                "AI Workflow Coordination",
+                "Process Optimization",
+                "Data Analysis & Web Systems",
               ].map((item) => (
                 <li key={item}>
                   <span className="text-section-dark-foreground/70 text-sm">
@@ -132,7 +131,7 @@ export const Footer = () => {
               © {currentYear} Keneth Kiplagat. All rights reserved.
             </p>
             <p className="text-section-dark-foreground/50 text-sm">
-              Data • Digital Strategy • Impact
+              Tech Operations • Digital Systems • AI Workflow
             </p>
           </div>
         </div>
