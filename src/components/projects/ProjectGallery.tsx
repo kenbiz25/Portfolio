@@ -4,12 +4,15 @@ import { Button } from "@/components/ui/button";
 
 interface ProjectGalleryProps {
   mainImage: string;
+  /** Optional responsive srcset for the main image */
+  mainImageSrcSet?: string;
   galleryImages: string[];
   title: string;
 }
 
 export function ProjectGallery({
   mainImage,
+  mainImageSrcSet,
   galleryImages,
   title,
 }: ProjectGalleryProps) {
@@ -49,6 +52,12 @@ export function ProjectGallery({
         >
           <img
             src={allImages[0]}
+            srcSet={mainImageSrcSet}
+            sizes="(max-width: 1280px) 100vw, 1200px"
+            width={1200}
+            height={600}
+            decoding="async"
+            {...{ fetchpriority: "high" }}
             alt={`${title} - Main`}
             className="w-full h-48 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
           />
@@ -74,6 +83,10 @@ export function ProjectGallery({
               >
                 <img
                   src={image}
+                  width={800}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
                   alt={`${title} - Image ${index + 2}`}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -96,6 +109,7 @@ export function ProjectGallery({
             size="icon"
             className="absolute top-4 right-4 text-white hover:bg-white/20"
             onClick={closeLightbox}
+            aria-label="Close image viewer"
           >
             <X className="w-6 h-6" />
           </Button>
@@ -107,6 +121,7 @@ export function ProjectGallery({
                 variant="ghost"
                 size="icon"
                 className="absolute left-4 text-white hover:bg-white/20"
+                aria-label="Previous image"
                 onClick={(e) => {
                   e.stopPropagation();
                   goToPrevious();
@@ -119,6 +134,7 @@ export function ProjectGallery({
                 variant="ghost"
                 size="icon"
                 className="absolute right-4 text-white hover:bg-white/20"
+                aria-label="Next image"
                 onClick={(e) => {
                   e.stopPropagation();
                   goToNext();

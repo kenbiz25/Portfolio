@@ -1,46 +1,25 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PageTransitionProps {
   children: ReactNode;
 }
 
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  enter: {
-    opacity: 1,
-    y: 0,
-  },
-  exit: {
-    opacity: 0,
-    y: -20,
-  },
-};
-
-const pageTransition = {
-  duration: 0.4,
-  ease: "easeInOut" as const,
-};
+// Only animate client-side navigations, never the first page load
+let hasNavigated = false;
 
 export const PageTransition = ({ children }: PageTransitionProps) => {
   const location = useLocation();
+  // Decided once per page mount; effects don't run on the server, so prerendered HTML never animates
+  const [animateIn] = useState(() => hasNavigated);
+
+  useEffect(() => {
+    hasNavigated = true;
+  }, []);
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={location.pathname}
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={pageVariants}
-        transition={pageTransition}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <div key={location.pathname} className={animateIn ? "animate-page-in" : undefined}>
+      {children}
+    </div>
   );
 };

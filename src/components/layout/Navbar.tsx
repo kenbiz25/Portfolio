@@ -71,7 +71,7 @@ export const Navbar = () => {
                 href="https://wa.me/254705091683"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:opacity-90 transition-opacity"
+                className="w-9 h-9 rounded-full bg-[hsl(var(--whatsapp))] flex items-center justify-center text-white hover:opacity-90 transition-opacity"
                 aria-label="WhatsApp"
               >
                 <Phone className="w-4 h-4" />
@@ -130,7 +130,7 @@ export const Navbar = () => {
                 href="https://wa.me/254705091683"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 py-3 rounded-full bg-[#25D366] text-white font-medium"
+                className="flex-1 flex items-center justify-center gap-2 py-3 rounded-full bg-[hsl(var(--whatsapp))] text-white font-medium"
               >
                 <Phone className="w-4 h-4" />
                 WhatsApp

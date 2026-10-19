@@ -1,3 +1,4 @@
+import { useSeo } from "@/lib/seo";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
@@ -150,6 +151,12 @@ const CALENDLY = "https://calendly.com/keneth_kiplagat/30min";
 const EMAIL = "kenbiz25@gmail.com";
 
 const Solutions = () => {
+  useSeo({
+    title: "Advisory Solutions",
+    description: "Advisory engagements in operational systems, support transformation, digital systems, workflow optimization and AI implementation for HealthTech organizations and NGOs.",
+    path: "/solutions",
+  });
+
   return (
     <Layout>
       <PageTransition>
@@ -206,7 +213,7 @@ const Solutions = () => {
                       <pillar.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">{pillar.title}</h3>
+                      <h2 className="font-semibold text-foreground mb-1">{pillar.title}</h2>
                       <p className="text-sm text-muted-foreground leading-relaxed">{pillar.description}</p>
                     </div>
                   </div>

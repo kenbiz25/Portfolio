@@ -1,16 +1,25 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Search engines, social previews and AI assistants are all welcome.
 User-agent: *
 Allow: /
 
+# AI crawlers and answer engines (explicitly allowed)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Meta-ExternalAgent
+User-agent: Bytespider
+User-agent: cohere-ai
+User-agent: DuckAssistBot
+Allow: /
+
+# LLM-readable summaries: https://www.kenkiplagat.co.ke/llms.txt and /llms-full.txt
 Sitemap: https://www.kenkiplagat.co.ke/sitemap.xml

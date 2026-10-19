@@ -1,49 +1,49 @@
-import { Headset, Bot, Settings, BarChart3 } from "lucide-react";
+import { Workflow, Bot, Users, BarChart3 } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const services = [
   {
-    icon: Headset,
-    title: "Technical Support Operations",
+    icon: Workflow,
+    title: "Technical Program Management",
     description:
-      "Building and improving support systems that deliver faster, more consistent, and scalable help to users and teams.",
+      "Leading delivery of multi-country technology programs, coordinating technical teams, field operations, and donor stakeholders.",
     includes: [
-      "Support workflow design & documentation",
-      "Ticketing system optimization",
-      "SLA tracking & performance reporting"
-    ]
-  },
-  {
-    icon: Bot,
-    title: "AI Workflow Coordination",
-    description:
-      "Designing and coordinating AI-powered workflows that reduce manual effort and improve operational throughput.",
-    includes: [
-      "AI tool integration & deployment",
-      "Prompt engineering & automation design",
-      "AI-assisted reporting & decision support"
-    ]
-  },
-  {
-    icon: Settings,
-    title: "Process Optimization & Digital Transformation",
-    description:
-      "Mapping, streamlining, and digitizing organizational processes to reduce friction and improve outcomes.",
-    includes: [
-      "Process audits & workflow redesign",
-      "SOPs & operational documentation",
-      "Change management support"
+      "Delivery planning, tracking & governance",
+      "Donor & leadership reporting",
+      "Escalation frameworks & vendor SLAs"
     ]
   },
   {
     icon: BarChart3,
-    title: "Data Analysis, Web Systems & SEO for AI",
+    title: "MIS & Reporting Platforms",
     description:
-      "Using data and modern web practices to improve visibility, strengthen reporting, and prepare content for AI discovery.",
+      "Building management information systems and dashboards that give leadership real-time visibility into delivery.",
     includes: [
-      "Data analysis & operational dashboards",
-      "Web systems setup & maintenance",
-      "SEO for AI (AEO, structured data, entity optimization)"
+      "Power BI, Looker & GA4 dashboards",
+      "Role-based access (RBAC) reporting",
+      "Program indicators & data quality"
+    ]
+  },
+  {
+    icon: Users,
+    title: "Field Implementation & Adoption",
+    description:
+      "Making sure what gets built actually gets used, by working with frontline teams to find and remove barriers to adoption.",
+    includes: [
+      "Field adoption assessments",
+      "Rollout & training plans",
+      "Workflow fit & digital literacy analysis"
+    ]
+  },
+  {
+    icon: Bot,
+    title: "Technology & AI Operations",
+    description:
+      "Putting AI and digital tools to work inside real operations, with the processes and support to keep them running.",
+    includes: [
+      "AI implementation & workflow automation",
+      "Support operations & SOPs",
+      "Product delivery support"
     ]
   },
 ];
@@ -57,10 +57,10 @@ export const ServicesSection = () => {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-accent font-medium mb-2 block">What I Help With</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Services I Offer
+              Making Technology Work in the Real World
             </h2>
             <p className="text-muted-foreground">
-              I help organizations improve workflows, strengthen operational visibility, and implement scalable systems powered by data, technology, and automation.
+              I sit between technical builders, field teams, and donor/leadership stakeholders, and make sure what gets built actually gets used.
             </p>
           </div>
         </ScrollReveal>

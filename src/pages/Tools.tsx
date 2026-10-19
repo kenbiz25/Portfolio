@@ -1,3 +1,4 @@
+import { useSeo } from "@/lib/seo";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
@@ -19,6 +20,12 @@ const tools = [
 ];
 
 const Tools = () => {
+  useSeo({
+    title: "Free Tools",
+    description: "Free utilities by Keneth Kiplagat, including an HTML to A4 PDF converter that preserves your styles.",
+    path: "/tools",
+  });
+
   return (
     <Layout>
       <PageTransition>

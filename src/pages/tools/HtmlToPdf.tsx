@@ -1,3 +1,4 @@
+import { useSeo } from "@/lib/seo";
 import { useState, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
@@ -94,6 +95,12 @@ const PLACEHOLDER_HTML = `<!DOCTYPE html>
 </html>`;
 
 const HtmlToPdf = () => {
+  useSeo({
+    title: "HTML to PDF Converter",
+    description: "Convert an HTML file or snippet into a print-ready A4 PDF with styles and colors preserved.",
+    path: "/tools/html-to-pdf",
+  });
+
   const [mode, setMode] = useState<Mode>("paste");
   const [htmlCode, setHtmlCode] = useState("");
   const [file, setFile] = useState<File | null>(null);

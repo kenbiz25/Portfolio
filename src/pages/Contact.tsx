@@ -1,3 +1,4 @@
+import { useSeo } from "@/lib/seo";
 import { Layout } from "@/components/layout/Layout";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
@@ -6,6 +7,12 @@ import { Calendar, Phone, Mail, MapPin } from "lucide-react";
 import { PageTransition } from "@/components/PageTransition";
 
 const Contact = () => {
+  useSeo({
+    title: "Contact",
+    description: "Get in touch with Keneth Kiplagat about Technical Program Management, MIS, Technology & AI Operations, Product Delivery or AI Implementation roles and engagements.",
+    path: "/contact",
+  });
+
   return (
     <Layout>
       <PageTransition>
@@ -38,7 +45,7 @@ const Contact = () => {
                   <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors">
                     <Calendar className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">Book a Call</h3>
+                  <h2 className="font-semibold text-foreground mb-2">Book a Call</h2>
                   <p className="text-sm text-muted-foreground">
                     Schedule a 30-minute strategy session
                   </p>
@@ -55,7 +62,7 @@ const Contact = () => {
                   <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-accent transition-colors">
                     <Phone className="w-7 h-7 text-accent group-hover:text-accent-foreground transition-colors" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">WhatsApp</h3>
+                  <h2 className="font-semibold text-foreground mb-2">WhatsApp</h2>
                   <p className="text-sm text-muted-foreground">
                     Quick questions? Chat directly
                   </p>
@@ -70,7 +77,7 @@ const Contact = () => {
                   <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors">
                     <Mail className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">Email</h3>
+                  <h2 className="font-semibold text-foreground mb-2">Email</h2>
                   <p className="text-sm text-muted-foreground">
                     kenbiz25@gmail.com
                   </p>

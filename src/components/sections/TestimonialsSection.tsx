@@ -99,9 +99,9 @@ export const TestimonialsSection = () => {
                           className="w-14 h-14 rounded-full object-cover"
                         />
                         <div>
-                          <h4 className="font-semibold text-foreground">
+                          <p className="font-semibold text-foreground">
                             {testimonial.name}
-                          </h4>
+                          </p>
                           <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                         </div>
                       </div>
@@ -117,6 +117,7 @@ export const TestimonialsSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={prevSlide}
+                aria-label="Previous testimonial"
                 className="rounded-full border-section-dark-foreground/20 text-section-dark-foreground hover:bg-section-dark-foreground/10"
               >
                 <ChevronLeft className="h-5 w-5" />
@@ -137,6 +138,7 @@ export const TestimonialsSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={nextSlide}
+                aria-label="Next testimonial"
                 className="rounded-full border-section-dark-foreground/20 text-section-dark-foreground hover:bg-section-dark-foreground/10"
               >
                 <ChevronRight className="h-5 w-5" />

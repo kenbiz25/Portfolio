@@ -1,0 +1,33 @@
+# Keneth Kiplagat
+
+> Keneth Kiplagat is a Technology & AI Operations and Technical Program Management professional based in Nairobi, Kenya. He leads technical delivery for multi-country digital health programs at Medtronic LABS, coordinating between technical teams, field operations, and donor stakeholders so platforms get adopted and actually work. Tagline: "Making technology work in the real world."
+
+## Summary
+
+- 8+ years in technical delivery, growth and partnerships.
+- Built MDTInsights, a role-based access control (RBAC) Power BI reporting platform giving leadership and donor stakeholders real-time delivery visibility across Bangladesh, Kenya, Ghana and Sierra Leone (https://mdtinsights.org).
+- Ran technical field adoption assessments in Freetown and Bombali, Sierra Leone, with community health workers and hospital teams, turning barriers (device access, digital literacy, workflow fit) into rollout and training plans.
+- National-scale secondment to the Kenya Digital Health Agency (Ministry of Health), contributing to the escalation management framework and tool used in the nationwide SHA/Tiberbu rollout.
+- Built AI support tools for health workers: a RAG-based WhatsApp assistant for Sierra Leone and a bilingual (Bangla/English) assistant and multi-channel support desk for Bangladesh (https://support.medtroniclabs.org).
+- Before health tech: 5+ years in growth, partnership and delivery roles at Mdundo.com, a pan-African media platform. Built reporting dashboards (Looker, GA4), managed multi-country vendor SLAs, and contributed to a 60% increase in customer retention through data-led interventions.
+- Also builds products, including CarwashManage, a multi-tenant SaaS for car wash businesses (https://carwashmanage.com).
+
+## Open to roles in
+
+- MIS Specialist (especially in donor-funded development programs)
+- Technical Program Management
+- Technology & AI Operations
+- Product Delivery
+- AI Implementation
+
+## Core skills
+
+Technical Project Management; Digital Health Platforms; Power BI, Looker and GA4; Field Implementation & Adoption; Multi-Country Program Delivery; Stakeholder & Donor Governance; Management Information Systems (MIS); RAG and LLM implementation; SEO and Brand Management.
+
+## Contact
+
+- Email: kenbiz25@gmail.com
+- LinkedIn: https://www.linkedin.com/in/kkiplagat/
+- GitHub: https://github.com/kenbiz25
+- Book a call: https://calendly.com/keneth_kiplagat/30min
+- Website: https://www.kenkiplagat.co.ke/

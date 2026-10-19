@@ -1,17 +1,39 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const focusPills = [
-  { label: "AI Workflows", href: "/portfolio" },
-  { label: "Support Ops", href: "/portfolio" },
-  { label: "Process Design", href: "/portfolio" },
+  { label: "Technical Program Management", href: "/portfolio" },
+  { label: "Digital Health", href: "/portfolio" },
+  { label: "AI Operations", href: "/portfolio" },
 ];
 
 export const HeroSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Background video is decorative and desktop-only: fetch it once the page has
+  // loaded and the browser is idle, so it never competes with the real content
+  useEffect(() => {
+    if (!window.matchMedia("(min-width: 1024px)").matches) return;
+    let timer: number | undefined;
+    const start = () => {
+      timer = window.setTimeout(() => setShouldLoadVideo(true), 2000);
+    };
+    if (document.readyState === "complete") start();
+    else window.addEventListener("load", start, { once: true });
+    return () => {
+      window.removeEventListener("load", start);
+      window.clearTimeout(timer);
+    };
+  }, []);
+
+  // A <source> added after mount is ignored until the element reloads
+  useEffect(() => {
+    if (shouldLoadVideo) videoRef.current?.load();
+  }, [shouldLoadVideo]);
 
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
@@ -29,15 +51,18 @@ export const HeroSection = () => {
               loop
               muted
               playsInline
+              preload="none"
               onLoadedData={() => setIsVideoLoaded(true)}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                 isVideoLoaded ? "opacity-100" : "opacity-0"
               }`}
             >
-              <source
-                src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-connections-animation-18377-large.mp4"
-                type="video/mp4"
-              />
+              {shouldLoadVideo && (
+                <source
+                  src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-connections-animation-18377-large.mp4"
+                  type="video/mp4"
+                />
+              )}
             </video>
             <div className={`absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-accent transition-opacity duration-1000 ${isVideoLoaded ? "opacity-0" : "opacity-100"}`} />
           </div>
@@ -55,23 +80,23 @@ export const HeroSection = () => {
 
       {/* Main Content */}
       <div className="container-custom relative z-10 py-20 lg:py-0">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:min-h-screen">
 
           {/* Left Content */}
           <div className="text-center lg:text-left pt-16 lg:pt-0">
 
             {/* Eyebrow */}
             <span className="inline-block text-accent font-medium text-sm tracking-widest uppercase mb-3 md:mb-5 animate-hero-fade-in animation-delay-100">
-              Tech Operations · Digital Systems · AI
+              Technology & AI Operations · Program Delivery
             </span>
 
             {/* Headline — short & punchy */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-3 md:mb-5 leading-[1.1] animate-hero-fade-in animation-delay-200">
-              Operations
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 md:mb-5 leading-[1.1]">
+              Making technology
               <br />
-              built to{" "}
+              work in the{" "}
               <span className="relative inline-block">
-                <span className="text-primary">scale.</span>
+                <span className="text-primary">real world.</span>
                 <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 100 6">
                   <path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="hsl(var(--accent))" strokeWidth="2" className="animate-draw-line" />
                 </svg>
@@ -79,8 +104,8 @@ export const HeroSection = () => {
             </h1>
 
             {/* Single tagline */}
-            <p className="text-base md:text-xl text-muted-foreground mb-4 md:mb-8 max-w-md mx-auto lg:mx-0 leading-relaxed animate-hero-fade-in animation-delay-300">
-              I design the workflows, systems, and AI tools that help organizations move faster and deliver more.
+            <p className="text-base md:text-xl text-muted-foreground mb-4 md:mb-8 max-w-md mx-auto lg:mx-0 leading-relaxed">
+              I lead technical delivery for multi-country digital health programs, so platforms get adopted and actually work.
             </p>
 
             {/* Focus pills — link to portfolio */}
@@ -126,19 +151,22 @@ export const HeroSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-2xl animate-pulse-slow" />
               <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/50 shadow-2xl bg-gradient-to-br from-primary to-accent">
                 <img
-                  src="img/kip-web.png"
-                  alt="Keneth Kiplagat - Tech Operations & Digital Systems Professional"
+                  src="/img/kip-web.webp"
+                  width={384}
+                  height={384}
+                  {...{ fetchpriority: "high" }}
+                  alt="Keneth Kiplagat - Technology & AI Operations, Technical Program Management"
                   className="w-full h-full object-cover scale-97 hover:scale-110 transition-transform duration-700"
                 />
               </div>
               <div className="absolute -top-4 -right-4 bg-card border border-border px-4 py-2 rounded-xl shadow-lg animate-float">
-                <span className="font-semibold text-foreground text-sm">Ops Systems</span>
+                <span className="font-semibold text-foreground text-sm">Program Delivery</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-xl shadow-lg animate-float-delayed">
-                <span className="font-semibold text-sm">AI Workflows</span>
+              <div className="absolute -bottom-4 -left-4 bg-accent text-gray-900 px-4 py-2 rounded-xl shadow-lg animate-float-delayed">
+                <span className="font-semibold text-sm">AI Operations</span>
               </div>
               <div className="absolute top-1/2 -right-8 translate-y-8 bg-primary text-primary-foreground px-4 py-2 rounded-xl shadow-lg animate-float">
-                <span className="font-semibold text-sm">Process Ops</span>
+                <span className="font-semibold text-sm">Digital Health</span>
               </div>
             </div>
           </div>
@@ -148,7 +176,7 @@ export const HeroSection = () => {
             <div className="relative animate-hero-fade-in">
               <div className="absolute -inset-3 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-xl" />
               <div className="relative w-36 h-36 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white/50 shadow-xl bg-gradient-to-br from-primary to-accent">
-                <img src="img/kip-web.png" alt="Keneth Kiplagat" className="w-full h-full object-cover" />
+                <img src="/img/kip-web.webp" width={208} height={208} {...{ fetchpriority: "high" }} alt="Keneth Kiplagat" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

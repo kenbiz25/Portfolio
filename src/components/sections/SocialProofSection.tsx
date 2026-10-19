@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
+  { value: "8+", label: "Years in Delivery" },
+  { value: "4", label: "Countries Supported" },
+  { value: "60%", label: "Customer Retention Lift" },
   { value: "15+", label: "Projects Delivered" },
-  { value: "200%", label: "Avg. Traffic Growth" },
-  { value: "40%", label: "Decision Speed Improvement" },
-  { value: "12+", label: "Happy Clients" },
 ];
 
 const partners = [
   { name: "Resolve Communications", Image: "/img/resolve.svg" },
   { name: "Medtronic LABS", Image: "/img/LABS.svg" },
   { name: "Hai Africa", Image: "/img/HAI.svg" },
-  { name: "Kenya Human Rights Commission", Image: "/img/khrc.svg" },
-  { name: "Mdundo", Image: "/img/mdundo.svg" },
+  { name: "Kenya Human Rights Commission", Image: "/img/KHRC.svg" },
+  { name: "Mdundo", Image: "/img/Mdundo.svg" },
   { name: "Synergy Gases", Image: "/img/Synergy.svg" },
 ];
 
@@ -135,6 +135,8 @@ export const SocialProofSection = () => {
                           <img
                             src={partner.Image}
                             alt={partner.name}
+                            width={120}
+                            height={40}
                             className="h-10 w-auto filter dark:invert mb-2 transition-all duration-500"
                             loading="lazy"
                           />

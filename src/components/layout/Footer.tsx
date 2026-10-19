@@ -14,18 +14,18 @@ export const Footer = () => {
               Keneth<span className="text-accent">.</span>
             </Link>
             <p className="mt-4 text-section-dark-foreground/70 text-sm leading-relaxed">
-              I help organizations improve workflows, strengthen operational visibility, and implement scalable systems powered by data, technology, and automation.
+              I lead technical delivery for multi-country digital health programs, so platforms get adopted and actually work.
             </p>
             <p className="mt-4 text-accent font-medium text-sm">
-              Tech Operations • Digital Systems • AI Workflow
+              Technology & AI Operations • Technical Program Management
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-section-dark-foreground mb-4">
+            <h2 className="text-lg font-semibold text-section-dark-foreground mb-4">
               Quick Links
-            </h4>
+            </h2>
             <ul className="space-y-2">
               {[
                 { name: "Home", href: "/" },
@@ -49,15 +49,15 @@ export const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold text-section-dark-foreground mb-4">
+            <h2 className="text-lg font-semibold text-section-dark-foreground mb-4">
               Services
-            </h4>
+            </h2>
             <ul className="space-y-2">
               {[
-                "Technical Support Operations",
-                "AI Workflow Coordination",
-                "Process Optimization",
-                "Data Analysis & Web Systems",
+                "Technical Program Management",
+                "MIS & Reporting Platforms",
+                "Field Implementation & Adoption",
+                "Technology & AI Operations",
               ].map((item) => (
                 <li key={item}>
                   <span className="text-section-dark-foreground/70 text-sm">
@@ -70,9 +70,9 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-section-dark-foreground mb-4">
+            <h2 className="text-lg font-semibold text-section-dark-foreground mb-4">
               Contact
-            </h4>
+            </h2>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-accent mt-0.5 flex-shrink-0" />
@@ -127,11 +127,11 @@ export const Footer = () => {
         {/* Divider */}
         <div className="border-t border-section-dark-foreground/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-section-dark-foreground/50 text-sm">
+            <p className="text-section-dark-foreground/75 text-sm">
               © {currentYear} Keneth Kiplagat. All rights reserved.
             </p>
-            <p className="text-section-dark-foreground/50 text-sm">
-              Tech Operations • Digital Systems • AI Workflow
+            <p className="text-section-dark-foreground/75 text-sm">
+              Technology & AI Operations • Technical Program Management
             </p>
           </div>
         </div>

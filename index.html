@@ -1,80 +1,92 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];
-        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-        var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-        j.async=true;
-        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-        f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-MDD9NJK8');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google AdSense (keep only if monetizing) -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8787623516632800"
-      crossorigin="anonymous">
-    </script>
-
     <!-- Basic Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="WLbf4EhchvC9TbbxbBhi029ztornng12n48_8JKtUrc" />
+    <meta name="theme-color" content="#0f172a" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
-    <link rel="shortcut icon" href="/img/favicon.ico" />
 
-    <!-- SEO Core -->
-    <title>Keneth Kiplagat | Tech Operations, Digital Systems & AI Workflow Coordination</title>
+    <!-- Apply saved / system theme before first paint (no light flash in dark mode) -->
+    <script>
+      try {
+        var t = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.classList.add(t);
+      } catch (e) {}
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
+
+    <!-- SEO Core (pages override these at runtime and at prerender time) -->
+    <title>Keneth Kiplagat | Technology & AI Operations · Technical Program Management</title>
     <meta
       name="description"
-      content="Keneth Kiplagat is a Tech Operations and Digital Systems Professional based in Kenya, helping organizations improve workflows, strengthen operational visibility, and implement scalable systems powered by data, technology, and automation."
-    />
-    <meta
-      name="keywords"
-      content="Tech Operations Kenya, Digital Systems Professional, AI Workflow Coordination, Process Optimization, HealthTech Africa, Support Operations, Digital Transformation, Medtronic LABS, AI Tools, Operational Systems"
+      content="Keneth Kiplagat leads technical delivery for multi-country digital health programs, coordinating technical teams, field operations, and donor stakeholders so platforms get adopted and actually work."
     />
     <meta name="author" content="Keneth Kiplagat" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.kenkiplagat.co.ke/" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Keneth Kiplagat – Tech Operations & Digital Systems Professional" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Keneth Kiplagat" />
+    <meta property="og:locale" content="en_KE" />
+    <meta property="og:title" content="Keneth Kiplagat | Technology & AI Operations · Technical Program Management" />
     <meta
       property="og:description"
-      content="Portfolio of Keneth Kiplagat — Tech Operations and Digital Systems Professional building scalable operational systems that improve support delivery, decision-making, and organizational impact across HealthTech, NGOs, and digital-first organizations."
+      content="Making technology work in the real world. Keneth Kiplagat leads technical delivery for multi-country digital health programs across Bangladesh, Kenya, Ghana, and Sierra Leone."
     />
-    <meta property="og:image" content="img/og.png" />
+    <meta property="og:url" content="https://www.kenkiplagat.co.ke/" />
+    <meta property="og:image" content="https://www.kenkiplagat.co.ke/img/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Keneth Kiplagat – Tech Operations & AI Workflow Coordination" />
+    <meta name="twitter:site" content="@Kenbiz25Keneth" />
+    <meta name="twitter:title" content="Keneth Kiplagat | Technology & AI Operations · Technical Program Management" />
     <meta
       name="twitter:description"
-      content="Building scalable operational systems that improve support delivery, decision-making, and organizational impact."
+      content="Making technology work in the real world: technical delivery for multi-country digital health programs."
     />
-    <meta name="twitter:image" content="https://www.kenkiplagat.co.ke/og-image.jpg" />
+    <meta name="twitter:image" content="https://www.kenkiplagat.co.ke/img/og.jpg" />
 
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Keneth Kiplagat",
-        "url": "https://www.kenkiplagat.co.ke",
-        "jobTitle": "Tech Operations & Digital Systems Professional",
-        "description": "Tech Operations and Digital Systems Professional with experience across HealthTech, NGOs, support operations, and process optimization. Specializes in AI workflow coordination and scalable operational systems.",
-        "knowsAbout": ["Tech Operations", "AI Workflow Coordination", "Digital Systems", "Process Optimization", "HealthTech", "Data Analysis", "SEO for AI"],
-        "sameAs": [
-          "https://www.linkedin.com/in/kkiplagat/",
-          "https://github.com/kenbiz25"
-        ]
-      }
+    <!--
+      Google Tag Manager + AdSense, deferred so they don't block first paint.
+      GTM loads on first interaction or 5s after load; AdSense only on interaction.
+    -->
+    <script>
+      (function () {
+        var gtmLoaded = false, adsLoaded = false;
+        function loadGtm() {
+          if (gtmLoaded) return; gtmLoaded = true;
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var s = document.createElement("script");
+          s.async = true; s.src = "https://www.googletagmanager.com/gtm.js?id=GTM-MDD9NJK8";
+          document.head.appendChild(s);
+        }
+        function loadAds() {
+          if (adsLoaded) return; adsLoaded = true;
+          var s = document.createElement("script");
+          s.async = true; s.crossOrigin = "anonymous";
+          s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8787623516632800";
+          document.head.appendChild(s);
+        }
+        var events = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function onInteract() {
+          events.forEach(function (e) { removeEventListener(e, onInteract); });
+          loadGtm(); loadAds();
+        }
+        events.forEach(function (e) { addEventListener(e, onInteract, { passive: true, once: true }); });
+        addEventListener("load", function () { setTimeout(loadGtm, 5000); });
+      })();
     </script>
   </head>
 
@@ -85,10 +97,10 @@
         src="https://www.googletagmanager.com/ns.html?id=GTM-MDD9NJK8"
         height="0"
         width="0"
-        style="display:none;visibility:hidden">
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager">
       </iframe>
     </noscript>
-    <!-- End GTM (noscript) -->
 
     <div id="root"></div>
 

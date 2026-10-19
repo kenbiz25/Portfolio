@@ -21,8 +21,8 @@ export const CTASection = () => {
               Let's Build Something Impactful Together
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Whether you need help with data analytics, digital visibility, or building 
-              systems that scale — let's discuss how I can support your mission.
+              Whether you need someone to lead technical delivery, build reporting that leadership trusts,
+              or get a platform adopted in the field, let's discuss how I can support your mission.
             </p>
           </ScrollReveal>
 

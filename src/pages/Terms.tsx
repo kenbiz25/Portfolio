@@ -1,8 +1,15 @@
+import { useSeo } from "@/lib/seo";
 import { Layout } from "@/components/layout/Layout";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Terms = () => {
+  useSeo({
+    title: "Terms & Conditions",
+    description: "Terms and conditions for using kenkiplagat.co.ke.",
+    path: "/terms",
+  });
+
   return (
     <Layout>
       <PageTransition>

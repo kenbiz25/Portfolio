@@ -1,8 +1,15 @@
+import { useSeo } from "@/lib/seo";
 import { Layout } from "@/components/layout/Layout";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const PrivacyPolicy = () => {
+  useSeo({
+    title: "Privacy Policy",
+    description: "How kenkiplagat.co.ke collects, uses and protects your information.",
+    path: "/privacy",
+  });
+
   return (
     <Layout>
       <PageTransition>

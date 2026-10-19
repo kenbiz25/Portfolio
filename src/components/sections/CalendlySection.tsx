@@ -16,8 +16,8 @@ export const CalendlySection = () => {
                 Schedule a Strategy Session
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                If you're looking to improve visibility, understand your data better, or design 
-                digital systems that actually work, let's have a focused conversation.
+                If you're delivering a technology program, building MIS and reporting, or rolling out
+                AI and digital tools that need to actually get used, let's have a focused conversation.
               </p>
             </div>
           </ScrollReveal>
@@ -70,7 +70,7 @@ export const CalendlySection = () => {
                   Book Your Strategy Call
                 </h3>
                 <p className="text-muted-foreground">
-                  Let's discuss your SEO, data analytics, or digital systems needs
+                  Let's discuss your program delivery, MIS, or AI operations needs
                 </p>
               </div>
 

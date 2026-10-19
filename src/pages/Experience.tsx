@@ -1,3 +1,4 @@
+import { useSeo } from "@/lib/seo";
 import { Layout } from "@/components/layout/Layout";
 import { Award, ExternalLink, BadgeCheck, Trophy, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -98,6 +99,12 @@ const awards = [
 ];
 
 const Experience = () => {
+  useSeo({
+    title: "Experience & Credentials",
+    description: "8+ years of technical program delivery, MIS, and technology & AI operations across multi-country digital health programs, NGOs and digital-first organizations. Certifications and awards.",
+    path: "/experience",
+  });
+
   return (
     <Layout>
       <PageTransition>
@@ -109,8 +116,8 @@ const Experience = () => {
                 Experience & Credentials
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                My work is supported by continuous learning across tech operations, AI workflow coordination,
-                digital systems, and data analysis — applied in real-world environments across HealthTech, NGOs, and digital-first organizations.
+                8+ years of technical program delivery, MIS, and technology & AI operations, applied in real-world
+                environments across multi-country digital health programs, NGOs, and digital-first organizations.
               </p>
             </ScrollReveal>
           </div>

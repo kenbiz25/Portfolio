@@ -9,11 +9,17 @@ interface UseScrollRevealOptions {
 export const useScrollReveal = (options: UseScrollRevealOptions = {}) => {
   const { threshold = 0.1, rootMargin = "0px 0px -50px 0px", triggerOnce = true } = options;
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  // Visible by default: prerendered HTML (and no-JS visitors) show everything, and
+  // content already on screen at load is never hidden (keeps LCP fast).
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
+
+    // Only content that starts below the fold gets hidden, then revealed on scroll
+    if (triggerOnce && element.getBoundingClientRect().top < window.innerHeight) return;
+    setIsVisible(false);
 
     const observer = new IntersectionObserver(
       ([entry]) => {

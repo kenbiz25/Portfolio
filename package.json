@@ -7,10 +7,12 @@
     "dev": "vite",
     "dev:server": "node server/index.js",
     "dev:all": "concurrently -n \"vite,server\" -c \"cyan,yellow\" \"npm run dev\" \"npm run dev:server\"",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr --emptyOutDir && node scripts/prerender.mjs",
+    "build:spa": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preview:prod": "node scripts/serve-dist.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

@@ -20,13 +20,13 @@ export const CookieConsent = () => {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[60]">
+    <div className="fixed inset-x-0 bottom-0 z-[60]" data-prerender-skip>
       <div className="container-custom pb-6">
         <div className="bg-card border border-border rounded-2xl p-5 shadow-lg flex flex-col md:flex-row md:items-center gap-4">
           <div className="text-sm text-muted-foreground">
             We use cookies for analytics and to support optional advertising. You can accept or
             decline. Learn more in our{" "}
-            <Link to="/privacy" className="text-primary hover:underline">
+            <Link to="/privacy" className="text-primary underline underline-offset-2">
               Privacy Policy
             </Link>
             .
